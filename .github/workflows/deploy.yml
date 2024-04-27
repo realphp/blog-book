@@ -9,7 +9,7 @@ jobs:
       - run: ls
 
   job2:
-    name： 微软job
+    name: 微软job
     runs-on: windows-latest
     steps:
       - run: node --version

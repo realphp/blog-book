@@ -1,0 +1,7 @@
+on: push
+
+jobs:
+  first_job:
+    steps:
+      - run: pwd
+      - run: ls

@@ -42,4 +42,4 @@ jobs:
 
     # 打包成静态文件
       - name: Build
-        run: pnpm install && pnpm build
+        run: pnpm install && pnpm run docs:build

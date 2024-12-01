@@ -1,12 +1,24 @@
 on: push
 
 jobs:
-  first_job:
+  build-job:
     name: 第一个job
     runs-on: ubuntu-latest
+
     steps:
-      - run: pwd
-      - run: ls
+      - name: 读取仓库
+        uses: actions/checkout@v4
+
+      - name: 安装依赖
+        run: |
+          pwd
+          ls
+
+      - name: 部署
+        uses: realphp/blog-book@main
+        with: 
+          branch: gh-pages
+          folder: build 
 
   job2:
     name: 微软job

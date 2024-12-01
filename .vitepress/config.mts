@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import AutoSidebar from "@iminu/vitepress-plugin-auto-sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -25,5 +26,11 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
-  }
+  },
+  
+  vite: {
+    plugins: [
+      AutoSidebar(),
+    ],
+  },
 })
